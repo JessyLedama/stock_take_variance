@@ -21,7 +21,7 @@
                                     <strong>
                                         Inventory Name:
                                     </strong>
-                                    <span t-field="o.inventory_id"/>
+                                    <span t-field="o.name"/>
                                 </div>
                                 <div name="location" class="col-md-12">
                                     <strong>
@@ -33,7 +33,7 @@
                                     <strong>
                                         Inventory Date:
                                     </strong>
-                                    <span t-field="o.inventory_id.date"/>
+                                    <span t-field="o.date"/>
                                 </div>
                             </div>
                             <table class="table table-condensed">
@@ -47,20 +47,20 @@
                                 </thead>
                             
                                 <tbody class="sale_tbody">
-                                    
-                                    <td>
-                                        <span t-field="o.product_id"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.theoretical_qty"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.product_qty"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.variance"/>
-                                    </td>
-                                    
+                                    <tr t-foreach="o.line_ids" t-as="l">
+                                        <td>
+                                            <span t-field="l.product_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.theoretical_qty"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.product_qty"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.variance"/>
+                                        </td>
+                                    </tr>
                                 </tbody>               
                             </table>
                         </div>
@@ -71,7 +71,7 @@
 
         <report
             id="variance_report"
-            model="stock.inventory.line"
+            model="stock.inventory"
             string="Stock Variance Report"
             report_type="qweb-pdf"
             name="stock_take_variance.report_stock_variance"
