@@ -35,6 +35,18 @@
                                     </strong>
                                     <span t-field="o.date"/>
                                 </div>
+                                <div name="date" class="col-md-12">
+                                    <strong>
+                                        Inventory Of:
+                                    </strong>
+                                    <span t-field="o.filter"/>
+                                </div>
+                                <div name="date" class="col-md-12">
+                                    <strong>
+                                        Force Valuation Period:
+                                    </strong>
+                                    <span t-field="o.period_id"/>
+                                </div>
                             </div>
                             <table class="table table-condensed">
                                 <thead>
