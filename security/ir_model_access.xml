@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- User Access: Stock Inventory. -->
+        <record id="stock.access_stock_inventory_user" model="ir.model.access">
+            <field eval="0" name="perm_unlink"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+        </record>
+
+        <!-- User Access: Stock Moves. -->
+        <!-- <record id="stock.access_stock_move_user" model="ir.model.access">
+            <field eval="0" name="perm_unlink"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+        </record> -->
+
+        <!-- User Access: Stock Moves. -->
+        <!-- <record id="purchase.access_stock_move_purchase_user_manager" model="ir.model.access">
+            <field eval="0" name="perm_unlink"/>
+            <field eval="0" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+        </record> -->
+    </data>
+</openerp>
